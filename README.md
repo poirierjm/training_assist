@@ -19,3 +19,7 @@ password: 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
 ```bash
 python training_assit/main.py
 ```
+
+6- Ça prend un certains moment avant que la logiciel ouvre
+
+7- Pour fermer le logiciel, il faut faire un ctrl+c dans la console.
