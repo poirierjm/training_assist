@@ -12,7 +12,7 @@ from PoseModule import PoseDetector
 detector = PoseDetector(False, True, 0.5, 0.5)
 
 # For webcam input:
-cap = cv2.VideoCapture("/dev/video0", cv2.CAP_V4L2)
+cap = cv2.VideoCapture(0)
 
 # cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
 width = 1280
@@ -32,9 +32,9 @@ currentTimer = 20
 prev = time.time()
 
 basepath = path.dirname(__file__)
-mixer.init()
-mixer.music.load(path.abspath(basepath + "/audio/" + str(1) + ".ogg"))
-mixer.music.play()
+#mixer.init()
+#mixer.music.load(path.abspath(basepath + "/audio/" + str(1) + ".ogg"))
+#mixer.music.play()
 while cap.isOpened():
     success, image = cap.read()
     # image = cv2.resize(image, (frameWidth, frameHeight))
@@ -76,9 +76,10 @@ while cap.isOpened():
 
                 try:
 
-                    mixer.init()
-                    mixer.music.load(filepath)
-                    mixer.music.play()
+                    #mixer.init()
+                    #mixer.music.load(filepath)
+                    #mixer.music.play()
+                    print("test")
                 except error as message:
                     print(message)
                 # p = vlc.MediaPlayer(filepath)
